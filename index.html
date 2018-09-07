@@ -18,7 +18,7 @@
             <td>7</td>
             <td>8</td>
             <td>1h</td>
-            <td>
+            <td class="del">
                 <button class="button">删除</button>
             </td>
         </tr>
@@ -32,7 +32,7 @@
             <td>7</td>
             <td>8</td>
             <td>2h</td>
-            <td>
+            <td class="del">
                 <button class="button">删除</button>
             </td>
         </tr>
@@ -46,7 +46,7 @@
             <td>7</td>
             <td>8</td>
             <td>3h</td>
-            <td>
+            <td class="del">
                 <button class="button">删除</button>
             </td>
         </tr>
@@ -60,7 +60,7 @@
             <td>7</td>
             <td>8</td>
             <td>4h</td>
-            <td>
+            <td class="del">
                 <button class="button">删除</button>
             </td>
         </tr>
@@ -74,7 +74,7 @@
             <td>7</td>
             <td>8</td>
             <td>5h</td>
-            <td>
+            <td class="del">
                 <button class="button">删除</button>
             </td>
         </tr>
@@ -88,7 +88,7 @@
             <td>7</td>
             <td>8</td>
             <td>6h</td>
-            <td>
+            <td class="del">
                 <button class="button">删除</button>
             </td>
         </tr>
@@ -102,7 +102,7 @@
             <td>7</td>
             <td>8</td>
             <td>7h</td>
-            <td>
+            <td class="del">
                 <button class="button">删除</button>
             </td>
         </tr>
@@ -116,7 +116,7 @@
             <td>7</td>
             <td>8</td>
             <td>8h</td>
-            <td>
+            <td class="del">
                 <button class="button">删除</button>
             </td>
         </tr>
@@ -130,7 +130,7 @@
             <td>7</td>
             <td>8</td>
             <td>9h</td>
-            <td>
+            <td class="del">
                 <button class="button">删除</button>
             </td>
         </tr>
@@ -144,7 +144,7 @@
             <td>7</td>
             <td>8</td>
             <td>10h</td>
-            <td>
+            <td class="del">
                 <button class="button">删除</button>
             </td>
         </tr>
@@ -173,14 +173,14 @@
     //         input.focus();
     //     }
     // });
-    btn.forEach((ele,index)=>{
-        ele.onclick=function () {
-            table.childNodes[1].removeChild(tr[index])
-        }
-    })
+    // btn.forEach((ele,index)=>{
+    //     ele.onclick=function () {
+    //         table.childNodes[1].removeChild(tr[index])
+    //     }
+    // })
         table.ondblclick=function (event) {
             console.log(event.target.nodeName);
-            if(event.target.nodeName=="TD"){
+            if(event.target.nodeName=="TD"&&event.target.firstChild!="button"){
                 let input=document.createElement("input");
                 input.value=event.target.innerText;
                 event.target.innerText="";
